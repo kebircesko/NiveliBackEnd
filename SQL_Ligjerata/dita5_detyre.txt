@@ -1,0 +1,39 @@
+1. Tabela: Lendet
+CREATE TABLE Lendet (
+    LendaID INT PRIMARY KEY,
+    EmriLendes VARCHAR(100) NOT NULL
+);
+
+//LendaID është Primary Key (identifikon unikisht çdo lëndë)
+
+Tabela: Studentet
+CREATE TABLE Studentet (
+    StudentiID INT PRIMARY KEY,
+    Emri VARCHAR(100),
+    Mbiemri VARCHAR(100),
+    LendaID INT,
+    FOREIGN KEY (LendaID) REFERENCES Lendet(LendaID)
+);
+
+//StudentiID është Primary Key
+//LendaID është Foreign Key që lidhet me tabelën Lendet
+
+Insert në Lendet
+INSERT INTO Lendet (LendaID, EmriLendes) VALUES
+(1, 'Matematike'),
+(2, 'Informatike'),
+(3, 'Fizike');
+
+Insert në Studentet
+INSERT INTO Studentet (StudentiID, Emri, Mbiemri, LendaID) VALUES
+(101, 'Ardit', 'Krasniqi', 1),
+(102, 'Elira', 'Berisha', 2),
+(103, 'Dren', 'Gashi', 1);
+
+Bonus (JOIN për me i parë bashkë)
+SELECT 
+    Studentet.Emri,
+    Studentet.Mbiemri,
+    Lendet.EmriLendes
+FROM Studentet
+JOIN Lendet ON Studentet.LendaID = Lendet.LendaID;

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<style>
+			.empty {color: red;}
+		</style>
+	</head>
+	<body>
+		<p><span class="empty">* Required</span></p>
+		<form method="post" action="form1.php">
+			Username: <input type="text" name="Username">
+			<span class="empty">*<?php echo $empUsername;?></span><br><br>
+			Password: <input type="password" name="Password">
+			<span class="empty">*<?php echo $empPassword;?></span><br><br>
+			<input type="submit" value="Log in">
+			<input type="reset" value="Cancel">
+		</form>
+		
+		
+		
+	</body>
+</html>

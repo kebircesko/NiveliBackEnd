@@ -1,0 +1,13 @@
+Detyre PHP:
+
+1.Krijo një file me emrin det1.php që përmban disa paragrafë me tekst (p.sh. “Lorem ipsum”) dhe në fund të faqes përdor funksionin include për të futur një file tjetër të quajtur footer.php.
+
+Në file-in footer.php, shfaq një mesazh me të drejtat e autorit ku viti aktual të shfaqet automatikisht duke përdorur funksionin date().
+
+2.Krijo një file me emrin det2.php që përmban një menu navigimi në pjesën e sipërme të faqes.
+Menuja duhet të ruhet në një file të veçantë me emrin menu.php(Home,HTML Tutorial,CSS Tutorial,JavaScript Tutorial,PHP Tutorial), dhe të përfshihet në faqen kryesore duke përdorur funksionin include të PHP-së.
+
+Për stilizimin e menusë përdor një file të jashtëm menucss.css, ku ngjyra e linkut në gjendje normale të jetë blu, ndërsa kur kalohet me mausin sipër (hover) të bëhet gjelbert dhe të nënvizohet.
+
+3.Krijo një file me emrin det3.php që shfaq një mesazh për njemakine.
+Variablat $carcolor dhe $carmodel duhet të ruhen në një file të veçantë me emrin vars.php, i cili përfshihet në faqen kryesore duke përdorur funksionin include.

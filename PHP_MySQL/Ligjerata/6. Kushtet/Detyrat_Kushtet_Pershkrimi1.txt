@@ -1,0 +1,14 @@
+Detyra1
+Nje numer te krahasohet a eshte me i vogel apo me i madh(si dhe te jepet nje else nese nuk eshte asnjera)
+
+Detyra2
+Te llogaritet nepermjet pikeve(te testet) sa eshte nota psh 50 deri 60 eshte nota 6,prej 60 deri 70 eshte nota 7, prej 70 deri 80 eshte nota 8, prej 80 deri 90 eshte nota 9 dhe prej 90 deri 100 eshte nota 10, si dhe nje else qe nuk kalon).
+
+Detyra3
+Te llogaritet nje numer a eshte qift apo tek
+
+Detyra4
+Sikurse te kodi ne klas te nxjeret muajt e vitit(me switch,case-at te behen me numer)
+
+Detyra5
+Sikurse te kodi ne klas te nxjeret muajt e vitit(me switch,case-at te behen me string)

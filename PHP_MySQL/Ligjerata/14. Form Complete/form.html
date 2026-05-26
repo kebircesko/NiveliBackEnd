@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<style>
+			.empty {color: red;}
+		</style>
+	</head>
+	<body>
+		<p><span class="empty">* Required</span></p>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+			Name: <input type="text" name="name">
+			<span class="empty">*<?php echo $empName;?></span><br><br>
+			Last Name: <input type="text" name="lastName">
+			<span class="empty">*<?php echo $empLastName;?></span><br><br>
+			Email: <input type="text" name="email">
+			<span class="empty">*<?php echo $empEmail;?></span><br><br>
+			Password: <input type="password" name="password">
+			<span class="empty">*<?php echo $empPassword;?></span><br><br>
+			Confirm Password: <input type="password" name="confirmPassword">
+			<span class="empty">*<?php echo $empConfirmPassword;?></span><br><br>
+			Gender:<input type="radio" name="gender" <?php if (isset($gender) && $gender=="Femer") echo "checked";?> value="Femer">F
+				   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Mashkull") echo "checked";?> value="Mashkull">M
+			<span class="empty">*<?php echo $empGender;?></span><br><br>
+			Birthday: <input type="date" name="birthday">
+			<span class="empty">*<?php echo $empBirthday;?></span><br><br>
+			<input type="submit" value="Log in">
+			<input type="reset" value="Cancel">
+		</form>
+		
+		
+	</body>
+</html>

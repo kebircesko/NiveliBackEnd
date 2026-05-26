@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA Steakhouse</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <script>
+        $(document).ready(function(){
+        $("#as p").hide();
+        $("#close").hide();
+        $("#hamburger").click(function(){
+            $("#canvas").fadeIn().delay(200);
+            $("#as p").slideDown();
+            $("#hamburger").hide();
+            $("#close").show();
+        });
+        $("#close").click(function(){
+            $("#canvas").fadeOut().delay(200);
+            $("#as p").slideUp();
+            $("#hamburger").show();
+            $("#close").hide();
+        });
+
+        $(".navclick").click(function(){
+            $("#canvas").fadeOut().delay(200);
+            $("#as p").slideUp();
+            $("#hamburger").show();
+            $("#close").hide();
+        });
+    });
+    </script>
+
+<div id="navpc">
+    <img src="./images/logo.png" id="logopc" alt=""/>
+    <ul>
+        <a href="index.php"><li>Home</li></a>
+        <a href="menu.php"><li>Menu</li></a>
+        <a href="about.html"><li>About</li></a>
+        <a href="contact.php"><li id="last">Contact</li></a>
+        <a href="book.html"><button class="primary">Book a table</button></a>
+    </ul>
+</div>
+
+<div id="navmobile">
+    <img src="./images/logo.png" id="logomob" alt="" />
+    <ion-icon name="menu" id="hamburger"></ion-icon>
+</div>
+
+<div id="canvas">
+    <div id="headercanvas">
+        <div id="navmobile">
+            <img src="./images/logo.png" id="logomob" alt="" />
+            <ion-icon name="close" id="close"></ion-icon>
+        </div>
+    </div>
+    <div id="bodycanvas">
+        <div id="as">
+            <a class="navclick" href="index.php"><p>Home</p></a>
+            <a class="navclick" href="menu.php"><p>Menu</p></a>
+            <a class="navclick" href="about.html"><p>About</p></a>
+            <a class="navclick" href="contact.php"><p>Contact</p></a>
+            <a href="book.html"><button class="primary">Book a table</button></a>
+        </div>
+    </div>
+</div>
+
+<div class="track">
+    <h1>About us</h1>
+</div>
+
+<div class="aboutdiv">
+    <img src="images/about.png" alt="">
+    <div>
+        <h1>Our values</h1>
+        <br>
+        <p>At our steakhouse, we believe that great food starts with great values. We’re committed to quality in every cut, sourcing only the finest ingredients and preparing them with care and craftsmanship. Honoring tradition while embracing bold flavors, we create meals that are both timeless and unforgettable. But more than just the food, we value warm hospitality, treating every guest like family and every visit like a special occasion. From the first sizzle to the last bite, our mission is simple — serve excellence, every time.</p>
+        <br>
+        <p>We also believe in integrity — in the way we treat our team, our community, and our craft. Every decision we make, from the ingredients we choose to the atmosphere we create, reflects our commitment to excellence and respect. We’re not chasing trends; we’re building a legacy of bold flavors, genuine connections, and unforgettable dining. At our core, we’re here to celebrate the timeless joy of a perfectly cooked steak shared with good company.</p>
+    </div>
+</div>
+
+<div class="mapdiv">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47273.238908721614!2d20.693398261304893!3d42.22347528971652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353950a12f4301f%3A0xda0e2e9b8d3d5850!2sPrizren%2020000!5e0!3m2!1sen!2s!4v1744573835852!5m2!1sen!2s" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+<footer>
+    <div class='footerlogo'>
+      <img src="images/logo.png" alt="">
+    </div>
+    <div class="sitemap">
+      <h2>SITEMAP</h2>
+      <div class="whiteline"></div>
+      <a href="index.php">Home</a>
+      <a href="menu.php">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.php">Contact</a>
+    </div>
+    <div class="contactfooter">
+    <h2>CONTACT</h2>
+      <div class="whiteline"></div>
+      <a href="tel: +38344124265">
+        <ion-icon name="call"></ion-icon>
+        <p>+383 44 444 444</p>
+      </a>
+  
+      <a href="mailto: info@betones.com">
+        <ion-icon name="mail"></ion-icon>
+        <p>info@easteakhouse.com</p>
+      </a>
+  
+      <a href="https://maps.app.goo.gl/q9DPzKMianUKCRaLA">
+        <ion-icon name="location"></ion-icon>
+        <p>Prizren, Kosovo</p>
+      </a>
+    </div>
+  </footer>
+  <section class="copyright">
+    <p>&copy; EA STEAKHOUSE 2025</p>
+  </section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
