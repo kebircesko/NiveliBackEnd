@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 	</head>
@@ -61,6 +60,7 @@
 			else{
 				echo "Nuk kalon!";
 				}
+
 		?>
         <br>
 		<?php
@@ -79,7 +79,8 @@
         <br>
 		<?php 
             //Shembulli 5
-			$z = 13;
+			$z = 1;
+			
 			switch($z)
 			{
 				case 1:

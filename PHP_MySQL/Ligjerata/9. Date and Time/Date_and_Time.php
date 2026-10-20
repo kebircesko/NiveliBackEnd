@@ -1,7 +1,3 @@
-<?php
-    date_default_timezone_set('Europe/Tirane'); // Ndrysho sipas zonës tënde kohore
-    $time = date('H:i:s');
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,40 +9,23 @@
 		echo "Sot eshte " . date("d/m/y") . "<br>";
 		echo "Sot eshte " . date("Y.m.d") . "<br>";
 		echo "Sot eshte " . date("Y m d") . "<br>";
-		echo "Sot eshte " . date("Y-m-d") . "<br>";
-		echo "Sot eshte " . date("Y!m!d") . "<br>";
-		echo "Sot eshte " . date("Y")." viti ".date("m") ." muaji ".date("d")." dita". "<br>";
-		echo "Sot eshte " . date("l") . "<br>";
-		echo "Sot eshte i" . date(" j") . "<br>";
+		echo "Sot eshte " . date("l");
 	?>
 	<br>
     <p>Copyright</p>
 	<!--Si behet nderrimi i vitit te copyright automatik-->
-	© 2006-<?php echo date("Y");?>
+	© 2010-<?php echo date("Y");?>
 	<br>
-    <p>Date() clock method</p>
-    <div id="clock1"></div>
-	<script>
-        function updateClock() {
-            const now = new Date();
-            let hours = now.getHours().toString().padStart(2, '0');
-            let minutes = now.getMinutes().toString().padStart(2, '0');
-            let seconds = now.getSeconds().toString().padStart(2, '0');
-            
-            document.getElementById('clock1').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-        setInterval(updateClock, 1000);
-        window.onload = updateClock;
-    </script>
+    <p>Date()</p>
 	<?php
 	//Si tregohet ora e sakte permes funksionit "date()".
-		echo "Ora eshte " . date("H:i:s A"); //ora,minuta,sekonda a-am ose pm varet prej kohes
+		echo "Ora eshte " . date("H:i:s a"); //ora,minuta,sekonda a-am ose pm varet prej kohes
 	?>
     <br> 
     <br>
 	<?php 
 	//Krijimi i nje date me vlerat tona
-		$date=mktime(03, 05, 50, 02, 04, 1996);//ora,minuta,sekonda,muaji,data,viti
+		$date=mktime(23, 04, 50, 07, 27, 1994);//ora,minuta,sekonda,muaji,data,viti
 		echo date("Y-m-d H:i:s a", $date);
 	?>
     <br>
@@ -60,20 +39,11 @@
     <?php
         $d=strtotime("tomorrow");
         echo date("Y-m-d h:i:sa", $d) . "<br>";
-	echo '<br>';
-        $d=strtotime("last Friday");
+
+        $d=strtotime("next Saturday");
         echo date("Y-m-d h:i:sa", $d) . "<br>";
-	echo '<br>';
-		$d=strtotime("next Friday");
-        echo date("Y-m-d h:i:sa", $d) . "<br>";
-	echo '<br>';
-		$d=strtotime("next Year last");
-        echo date("Y-m-d h:i:sa", $d) . "<br>";
-	echo '<br>';
-        $d=strtotime("-3 Months");
-        echo date("Y-m-d h:i:sa", $d) . "<br>";
-	echo '<br>';
-		$d=strtotime("+3 Year");
+
+        $d=strtotime("+3 Months");
         echo date("Y-m-d h:i:sa", $d) . "<br>";
 ?>
     </body>

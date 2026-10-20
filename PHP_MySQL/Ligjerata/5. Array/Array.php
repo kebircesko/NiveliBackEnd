@@ -7,26 +7,28 @@
 		//Indexed Arrays -jane array me indeksa numerik
 		//Krijimi i nje Array
 			$x = array("Shkolla","Digjitale","Prizren");
-			// echo ($x);
 			//Menyra se si mund te ju qasemi elementeve te Array, permes Index.
-			echo $x[0]."<br>".$x[1]."<br>".$x[2].'<br>';
-            // //echo $x;
-            print_r($x);
+			echo $x[0]."<br>".$x[1]."<br>".$x[2];
+            //echo $x;
+            //print_r($x);
             echo "<br>";
             var_dump($x);
+        
 		?>
 		<br>
 		<?php
 			//Count(), kjo metod na mundeson te gjejme gjatesin e array.
 			$x = array("Shkolla","Digjitale","Prizren");
+			
 			echo count($x);
 		?>
 		<br>
 		<?php
 		//Associative Arrays - jane array me emra te qelsave
 		//I pari eshte qelesi ndersa e dyta vlera,p.sh "Kebir" eshte qelesi, ndersa "24" eshte vlera
-			$mosha = array("Kebir"=>29, "Arianit"=>31, "Fation"=>26);
-			echo "Kebiri eshte " . $mosha['Kebir'] . " vjeq.";
+			$mosha = array("Kebir"=>30, "Arianit"=>32, "Fation"=>25);
+        
+			echo "Kebir eshte " . $mosha['Kebir'] . " vjeq.";
 		?>
 		<h2>Sorting Arrays</h2>
 		<h3>sort()</h3>
@@ -51,7 +53,9 @@
 		//Per renditjen e tekstit
 			//$text = array("Shkolla","Digjitale","Prizren");
 			$text = array("Shkolla","Digjitale","Prizren", "kebir");
+            
             sort($text);
+			
             $x = count($text);
         
 			for($y=0; $y<$x; $y++)
@@ -60,6 +64,7 @@
 				echo "<br>";
 			}
 		?>
+        
 		<h3>rsort()</h3>
 		<?php
 			$x = array(2,43,65,4,7,2,12,3,9,8);
@@ -75,24 +80,32 @@
             
         //Vazhdim...
 		?>
+    
+        
 		<h3>asort()</h3>
 		<?php
 		//Associative Arrays - mund te renditen edhe nga fillimi edhe nga fundi.
 		//asort()-mundeson renditjen e elementeve ne baze te vleres.
-            $mosha = array("Kebir"=>"29", "Arianit"=>"31", "Fation"=>"25");
+			
+            $mosha = array("Kebir"=>"30", "Arianit"=>"32", "Fation"=>"25");
+        
 			asort($mosha);
+        
 			foreach($mosha as $x => $x_value)
 			{
 				echo $x ." - ". $x_value;
 				echo "<br>";
 			}
 		?>
+        
+        
 		<h3>ksort()</h3>
 		<?php
 		//ksort()-mundeson renditjen e ementeve ne baze te qelesit. 
-			$mosha = array("Kebir"=>"24", "Arianit"=>"26", "Fatjona"=>"26");
+			$mosha = array("Kebir"=>"30", "Arianit"=>"32", "Fation"=>"25");
 			ksort($mosha);
-			$mosha1 = array("Kebir"=>"24", "Arianit"=>"26", "Fatjona"=>"26");
+        
+			$mosha1 = array("Kebir"=>"30", "Arianit"=>"32", "Fation"=>"25");
         
 			foreach($mosha as $x => $x_value)
 			{
@@ -104,7 +117,7 @@
 		<?php
 		//Associative Arrays - mund te renditen edhe nga fillimi edhe nga fundi.
 		//arsort()-mundeson renditjen e ementeve ne baze te vleres nga fundi ne fillim.
-			$mosha = array("Kebir"=>"24", "Arianit"=>"26", "Fatjona"=>"26");
+			$mosha = array("Kebir"=>"30", "Arianit"=>"32", "Fation"=>"25");
 			arsort($mosha);
 			foreach($mosha as $x => $x_value)
 			{
@@ -116,7 +129,7 @@
 		<?php
 		//Associative Arrays - mund te renditen edhe nga fillimi edhe nga fundi.
 		//krsort()-mundeson renditjen e ementeve ne baze te qelesit nga fundi ne fillim. 
-			$mosha = array("Kebir"=>"24", "Arianit"=>"26", "Fatjona"=>"26");
+			$mosha = array("Kebir"=>"30", "Arianit"=>"32", "Fation"=>"25");
 			krsort($mosha);
 			foreach($mosha as $x => $x_value)
 			{
@@ -130,6 +143,7 @@
             //Array multidimensional ne PHP njihet gjithashtu si grup i array. 
             //Kjo ju lejon të ruani të dhëna tabelore në një grup. 
             //Array multidimensional ne PHP mund të paraqitet në formën e matricës e cila përfaqësohet nga kolona dhe rresht.
+            
             $arr = array(  
                     array(4,"Prizren",20000),  //row 1 04 -00
                     array(1,"Prishtine",10000),//row 2

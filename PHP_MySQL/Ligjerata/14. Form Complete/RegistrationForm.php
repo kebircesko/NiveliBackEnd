@@ -21,11 +21,11 @@
 				{
 					$empName ="Name is required";
 				}
-				else if (!preg_match("/^[a-zA-ZëËÇç ]*$/",$name)) //Funksioni preg_match na mundeson qe ta shenojme nje input ne forme te rregullt, apo te na paralajmroje kur kemi perdorur ndonje karakter jovalid.
+				else if (!preg_match("/^[a-zA-ZëË ]*$/",$name)) //Funksioni preg_match na mundeson qe ta shenojme nje input ne forme te rregullt, apo te na paralajmroje kur kemi perdorur ndonje karakter jovalid.
 				{
 					$empName = "Only letters and white space allowed";
 				}
-				
+		
 			$lastName =secure($_POST['lastName']);
 				if(empty($lastName))
 				{
@@ -67,7 +67,6 @@
 				}
 				
 		}
-		
 		function secure($x) {
 			$x = htmlspecialchars($x); //Ky funksion mundeson qe karakteret speciale te i konverton ne karaktere te HTML
 			$x = trim($x);	//Ky funksion largon karakteret e panevojshme si (extra space, tab, newline etj), nga te dhenat hyrse te perdoruesit.

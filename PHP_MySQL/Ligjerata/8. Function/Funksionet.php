@@ -2,11 +2,21 @@
 	<head>
 	</head>
 	<body>
+		<!--Fuqia reale e PHP vjen nga funksionet e tij; ka më shumë se 1000 funksione të para-ndërtuara.
+		Pavarsisht funksioneve të paracktuara PHP, ne mund të krijojmë funksione sipas nevojës.
+		Një funksion është një bllok i cili përdoret në mënyrë të përsëritur në program.
+		Kur ngarkohet një faqe, funksionet nuk ekzekutohen menjëherë.
+		Një funksion do të ekzekutohet kur funksioni thërritet.
+		Një funksion i përcaktuar nga përdoruesi fillojnë deklarimin me fjalën kyçe “function”
+		Sintaksa:function EmriFunksioni() { kodi që do të ekzekutohet; }
+		Një emër funksioni mund të fillojë me shkonjë ose një underscore (-) jo numbër.
+		Emërtoji funksionet me emra që identifikojnë rolin e tyre. 
+		Funksionet e emrave NUK jane case-sensitive.-->
 		<?php
 			//Krijmi i nje funksioni
 			function x() //metoda per funksionet
 			{
-				echo "Shkolla Digjitale Prizren 2026"; //Vendosja e "echo" brenda funksionit.
+				echo "Shkolla Digjitale Prizren"; //Vendosja e "echo" brenda funksionit.
 			}
 			x(); //Thirrja e nje funksioni,si dhe x eshte emri i funksionit
 		?>
@@ -19,12 +29,14 @@
 			text("Shkolla");//Thirrja e funksionit me argumente(parametra).
 			text("Shkolla");
 			text("Shkolla");
-			// text1("Art"," Gashi",16);//A funksionon ?
-			function text1($emri1,$mbiemri,$mosha)//Funksioni me parametra
+	
+			function text1($emri1,$mbiemri)//Funksioni me parametra
 			{
-				echo $emri1." ".$mbiemri." ".$mosha."<br>";
+				echo $emri1.$mbiemri."<br>";
 			}
-			text1("Kebir"," Çesko",29);//Thirrja e funksionit me argumente(parametra).
+			text1("Shkolla","Digjitale");//Thirrja e funksionit me argumente(parametra).
+			text1("Shkolla","Digjitale");
+			text1("Shkolla","Digjitale");
 		?>
 		<br>
 		<?php
@@ -47,9 +59,7 @@
 			return $a + $b;//Return perdoret per te na kthyer nje rezultat nga kodi i funksionit
 			//return $a . $b;
 			}
-			//echo number(5, "1days"); //e merr te stringu shkronjen dmth numrin e pare dhe e mbledh
-			echo number(5,1);
-			echo "<br>";
+			echo number(5, "1days"); //e merr te stringu shkronjen dmth numrin e pare dhe e mbledh
 		?>
 		<br> 
 		<?php
@@ -57,20 +67,20 @@
 			{
 				return $a * $b;//Return gjithashtu perdoret edhe per ta ndaluar se ekzekutuar funksionin.
 			}
-			echo test1(5,5);//e merr te stringu shkronjen dmth numrin e pare dhe e mbledh
+			echo test1(5,"5days");//e merr te stringu shkronjen dmth numrin e pare dhe e mbledh
 		?>
 		<br>
 		<br>
 		<?php
-			
 			function numri()
 			{
-				$x1 = "6"; //deklarimi i variablave ne menyre lokale.Mund te i caktojme edhe variabla brenda funksionit,dhe nuk e kqyr tipin per me +,-,*,/
+				$x = "6"; //deklarimi i variablave ne menyre lokale.Mund te i caktojme edhe variabla brenda funksionit,dhe nuk e kqyr tipin per me +,-,*,/
 				$y = 6;
-				return $x1 + $y;
+				return $x * $y;
+				
 			}
 			echo numri();
-            //echo $y;//nuk funksionon dmth me thirre variablen pse ?
+            //echo $y;//nuk funksionon dmth me thirre variablen
 		?>
 		<br>
 		<br>
@@ -84,17 +94,9 @@
 				return $x + $y;
 			}
 			echo mbledh();
-			echo '<br>';
-			echo $x;
 		?>
 		<br>
 		<br>
-		<?php
-				echo $x;
-				echo '<br>';
-				//echo $x1; //nuk thirret sepse eshte local variable
-				echo '<br>';
-		?>
 		<?php
 			function fiks ($x = 20,$y = 30) //Parametrave mund te ju caktojme edhe vlera fikse.
 			{
@@ -110,7 +112,7 @@
 			{
 				return (int)($a + $b);
 			}
-			echo mePresje(1.6, 3.3);
+			echo mePresje(1.5, 3.3);
 		?>
 		<br>
 		<br>
@@ -118,10 +120,11 @@
 		//Nese e shenojme keshtu atehere si rezultat na nxjerr numer me presje(float).
 			function mePres($a, $b) 
 			{
-				//return ($a + $b);
-				return round($a + $b); //per me i rumbullaksu vleren
+				return ($a + $b);
+				//return round($a + $b); //per me i rumbullaksu vleren
 			}
-			echo mePres(1.4, 3.3);
+			echo mePres(1.5, 3.3);
+		
 		?>	
 		<br>
 		<br>
@@ -129,15 +132,17 @@
 		//Nese e shenojme keshtu atehere si rezultat na nxjerr numer me presje(float).
 			function mePres1($a, $b) 
 			{
+				
 				return round($a + $b); //per me i rumbullaksu vleren
 			}
 			echo mePres1(1.5, 3.3);
+		
 		?>
 		<br><br>
 		<?php
 
-			//echo number();
-			echo mbledh();
+			echo number(5, "1days");
+
 		?>
 	</body>
 </html>

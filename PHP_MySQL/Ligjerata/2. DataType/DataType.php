@@ -10,11 +10,13 @@
             
             echo $x . $y;
 		?>
+        
 		<h3>Integer</h3>
 		<?php
 		 // Tipi i te dhenave Integer.
 		 //Me Integer mund te shenojme te dhena number, mirepo vetem numra te plot.
 		 //Rangu i numrave qe i perfshin integer eshte nga -2^31 deri ne 2^31.
+			
             $x = 2323;
             echo $x; 
             echo "<br>";
@@ -22,6 +24,7 @@
 		?>
 		<br>
 		<?php  
+			
             $x=123;  
 			$y='abc';
 			$z=4.4;
@@ -34,16 +37,17 @@
 			var_dump(is_int($y));
 			echo is_string($x);
 			echo "<br>";
-			var_dump(is_float($z));
+			var_dump(is_float($y));	
         ?>  
 		<br>
         <?php   
             // Numrat Decimal   baze 10
             $deci1 = 40;    
             $deci2 = 500;    
+				
             // Numrat Oktal     baze 8       
 				$octal1 = 07;    
-			
+				
             // Numrat HeksaDecimal   baze 16
 				$heksa = 0x10;    
 				$add = $deci1 + $deci2;   
@@ -70,16 +74,16 @@
 				$y = false;
 				
 				echo $x.'<br>'; //Kur eshte true na kthen si rezultat 1
-                var_dump($x);
-				echo $y . '<br>'; //Ndersa kur eshte false nuk na kthen si rezultat asgje.
-                var_dump($y);
+                //var_dump($x);
+				echo $y; //Ndersa kur eshte false nuk na kthen si rezultat asgje.
+                //var_dump($y);
 				?>
         <h3>Array</h3>
 			<?php
 			     //var array = [10,10,10];
 
 				$arr = array(10,20,30);
-				$text = array('shkolla','Digjitale','Prizren','PZ ');
+				$text = array('shkolla','Digjitale','Prizren','PZ');
 				//echo $arr; //Tek Array nuk na funksionon as echo as print.
 				//print $arr;
 				print_r($arr); //Na nxjerr rezultatin dhe na tregon secili element ne cilin indeks ndodhet.
@@ -116,6 +120,7 @@
 			?> 
 			<br>
             <br>
+
 			<?php  
 				$x = NULL;  
 				var_dump($x);  

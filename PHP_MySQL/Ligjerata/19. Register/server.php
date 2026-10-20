@@ -1,99 +1,74 @@
 <?php
 session_start();
-
-// inicializimi i variablave
+// initializing variables
 $username = "";
 $email    = "";
 $errors = array(); 
-
-// lidhja me databazën
-$db = mysqli_connect('localhost','root','','registration');       
-
-// REGJISTRIMI I PËRDORUESIT
+// connect to the database
+$db = mysqli_connect('localhost','kebir','Kebir123!','registration');       
+// REGISTER USER
 if (isset($_POST['reg_user'])) {
-
-  // marrja e të gjitha vlerave nga forma
+  // receive all input values from the form
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-
-  // validimi i formës: kontrollon nëse fushat janë plotësuar saktë
-  // gabimet shtohen në array $errors
-  if (empty($username)) { array_push($errors, "Username është i detyrueshëm"); }
-  if (empty($email)) { array_push($errors, "Email është i detyrueshëm"); }
-  if (empty($password_1)) { array_push($errors, "Password është i detyrueshëm"); }
+  // form validation: ensure that the form is correctly filled ...
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($username)) { array_push($errors, "Username is required"); }
+  if (empty($email)) { array_push($errors, "Email is required"); }
+  if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
-    array_push($errors, "Fjalëkalimet nuk përputhen");
+	array_push($errors, "The two passwords do not match");
   }
-
-  // kontrollon në databazë nëse ekziston përdorues me të njëjtin username ose email
+  // first check the database to make sure 
+  // a user does not already exist with the same username and/or email
   $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
-  
-  if ($user) { // nëse përdoruesi ekziston
+  if ($user) { // if user exists
     if ($user['username'] === $username) {
-      array_push($errors, "Username ekziston tashmë");
+      array_push($errors, "Username already exists");
     }
 
     if ($user['email'] === $email) {
-      array_push($errors, "Email ekziston tashmë");
+      array_push($errors, "email already exists");
     }
   }
-
-  // regjistrimi i përdoruesit nëse nuk ka gabime
+  // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-
-    // enkriptimi i password-it para ruajtjes në databazë
-    $password =  md5($password_1);//https://md5decrypt.net/en/
-
-    $query = "INSERT INTO users (username, email, password) 
-              VALUES('$username', '$email', '$password')";
-    mysqli_query($db, $query);
-
-    // ruajtja e session-it
-    $_SESSION['username'] = $username;
-    $_SESSION['success'] = "Jeni kyçur me sukses";
-
-    header('location: index.php');
+  	$password = md5($password_1);//encrypt the password before saving in the database
+      echo $password;
+  	$query = "INSERT INTO users (username, email, password) 
+  			  VALUES('$username', '$email', '$password')";
+  	mysqli_query($db, $query);
+  	$_SESSION['username'] = $username;
+  	$_SESSION['success'] = "You are now logged in";
+  	header('location: index.php');
   }
 }
-
-// ----------------------------
-// KYÇJA E PËRDORUESIT (LOGIN)
+// ... 
+// LOGIN USER
 if (isset($_POST['login_user'])) {
-
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
-
-  // kontrollon nëse fushat janë bosh
   if (empty($username)) {
-    array_push($errors, "Username është i detyrueshëm");
+  	array_push($errors, "Username is required");
   }
   if (empty($password)) {
-    array_push($errors, "Password është i detyrueshëm");
+  	array_push($errors, "Password is required");
   }
-
   if (count($errors) == 0) {
-
-    // enkriptimi i password-it për krahasim
-    $password = md5($password);
-
-    // kontrollon në databazë nëse të dhënat janë të sakta
-    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    $results = mysqli_query($db, $query);
-
-    if (mysqli_num_rows($results) == 1) {
-
-      // krijimi i session-it pas login-it të suksesshëm
-      $_SESSION['username'] = $username;
-      $_SESSION['success'] = "Jeni kyçur me sukses";
-      header('location: index.php');
-
-    } else {
-      array_push($errors, "Username ose password i gabuar ose nuk ekziston");
-    }
+  	$password = md5($password);
+  	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+  	$results = mysqli_query($db, $query);
+  	if (mysqli_num_rows($results) == 1) {
+  	  $_SESSION['username'] = $username;
+  	  $_SESSION['success'] = "You are now logged in";
+  	  header('location: index.php');
+  	}else {
+  		array_push($errors, "Wrong username/password combination");
+  	}
   }
 }
 ?>

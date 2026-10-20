@@ -57,7 +57,6 @@
 			<input type="submit" value="Log in">
 			<input type="reset" value="Cancel">
 		</form>
-
 		<?php 
 			echo "<h2>Rezultati:</h2>";
 			echo $name.'<br>';

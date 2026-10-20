@@ -17,7 +17,7 @@
             echo "<br>";
             echo $x / $y;
             echo "<br>";
-            echo $x % $y;   //modulo(per me e nxjerr mbetjen)
+            echo $x % $y;   //modulo(per me e zjerr mbetjen)
                             //10 / 20 = 0 
 		                    // 0
                             // 10
@@ -76,13 +76,13 @@
 			
             //AND
 			$z = ($x > 5 and $y < 30); //rezultati true(duhen me qene te dyjat me plotesu kushtin True True atehere del rezultati True,nese njona eshte False atehere del rezultati False-Sikurse te gjykimet)  
-            // echo $z;
+            echo $z;
             echo "<br>";
 			var_dump($z);
 			
             //OR
             echo "<br>";
-			$a = ($x > 15 or $y < 30);//Nese te dy kushtet jane te sakta rezultati del i sakte po ktu edhe nese njera del qe vetem njeri i sakt prap del i sakt True
+			$a = ($x > 10 or $y < 30);//Nese te dy kushtet jane te sakta rezultati del i sakte po ktu edhe nese njera del qe vetem njeri i sakt prap del i sakt True
 			var_dump($a);
             
             //NOT
@@ -90,10 +90,10 @@
 			$a = !($x > 10 or $y < 30);//E bene te kunderten nese eshte True del False nese eshte False del True
 			var_dump($a);
         
-            // // XOR
-            // echo "<br>";
-			// $a = ($x > 10 xor $y < 30);//0->0=0; 0->1=1; 1->0=1; 1->1=0;(ka edhe shembull per XOR ne google)
-			// var_dump($a);
+            // XOR
+            echo "<br>";
+			$a = ($x > 10 xor $y < 30);//0->0=0; 0->1=1; 1->0=1; 1->1=0;(ka edhe shembull per XOR ne google)
+			var_dump($a);
             
 		?>
         
@@ -106,12 +106,14 @@
             echo "<br>";    
         
             $name = "kebir";
-            $age = "29";
+            $age = "24";
 			echo $name,$age;//bashkim i elementeve me . dhe me ,
             echo "<br>";
             echo $x .= $y;
 		?>
-
+        
+        
+        
         <h3>Increment Decrement Operatoret</h3>
         
 		<?php
@@ -141,7 +143,8 @@
             $gjer = 5; 
             echo "Siperfaqja e paralelogramit eshte: " .  ($gjat * $gjer ) . " cm2"; 
             echo "<br>";
-            echo "Perimetri i paralelogramit eshte : " . ($gjat + $gjer ) . " cm";
-        ?>
+            echo "Permietri i paralelogramit eshte : " . ($gjat + $gjer ) . " cm";
+    ?>
+        
 	</body>
 </html>

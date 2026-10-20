@@ -6,8 +6,8 @@
 			$username =secure($POST['Username']);
 			$password =secure($POST['Password']);
 			if(empty(username) & empty(password));{
-                $empUsername ="Username is empty";
-                $empPassword ="Password is empty";
+                $empUsername ="Username is empty"
+                $empPassword ="Password is empty"
             }
             else if(empty($username)){
                 $empUsername ="Username is empty";

@@ -1,0 +1,7 @@
+Flori->nje loj ku eshte nje aktor dhe ai duhet me myt nje kundershtar (derisa e bene nje score_me_if), ne fund bossi del(3levela)
+Evliana->nje loj qe kan me lujt lojart,kundershtari let jet(repeat),ka me gjuj lojtari te kundershtari nese e prek perfundon loja,(3 levele)(nese mundesh me bo futboll,ose tenis bone)	
+Ergis->Ki me bo nje kuiz qe nje karakter ka me bo pytje,3 karaktere pergjigjen,cila eshte e sakt fiton, ndersa cila nuk eshte e sakt humb(3levele)
+Amin->5nivele,diqka me i myt enemies
+Lumi->nje loj si pacman(3levele cdo levele fantazmanat shpejtisa do te rritet)
+
+

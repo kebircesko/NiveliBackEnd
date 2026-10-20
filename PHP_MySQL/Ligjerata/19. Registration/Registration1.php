@@ -21,13 +21,19 @@
 			<br><br>
             Confirm Password: <input type="password" name="confirmPassword">
 			<br><br>
-			Gender:<input type="radio" name="gender" <?php if (isset($gender) && $gender=="Femer") echo "checked";?> value="Femer">F
-				   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Mashkull") echo "checked";?> value="Mashkull">M
+		Gender:
+		<input type="radio" name="gender" value="Femer"
+			<?= ($gender ?? '') === 'Femer' ? 'checked' : '' ?>> F
+
+		<input type="radio" name="gender" value="Mashkull"
+			<?= ($gender ?? '') === 'Mashkull' ? 'checked' : '' ?>> M
+
 			<br><br>
 			Birthday: <input type="date" name="birthday">
 			<br><br>
-			<input type="submit" name="login" value="Log in">
+			<input type="submit" name="login" value="Regjistrohu">
 			<input type="reset" value="Cancel">
+			<input type="submit" value="Llogin" formaction="Login.php">
 		</form>
 	</body>
 </html>

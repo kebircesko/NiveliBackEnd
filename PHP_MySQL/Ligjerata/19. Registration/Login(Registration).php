@@ -13,7 +13,7 @@
             <input type="reset" name="cancel" value="Cancel">
         </form>
         <?php
-            $connect=mysqli_connect('localhost','root','','login');// Create connection
+            $connect=mysqli_connect('localhost','kebir','Kebir123!','login');// Create connection
             mysqli_select_db($connect,'login');//select db
             
             if(isset($_POST['login']))//if form submitted

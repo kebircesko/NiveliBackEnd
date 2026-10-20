@@ -10,7 +10,7 @@
     $birthday ="";
     $errors = array(); //for any errors in input array
     
-    $conn=mysqli_connect("localhost","root","","login");//Open a connection to a MySQL Server, login-eshte emri i databazes
+    $conn=mysqli_connect("localhost","kebir","Kebir123!","login");//Open a connection to a MySQL Server, login-eshte emri i databazes
         mysqli_select_db($conn,'login');//Select a MySQL database
         
     if(isset($_POST['login']))//if form submitted, name="login"->lidhet me inputin ne form

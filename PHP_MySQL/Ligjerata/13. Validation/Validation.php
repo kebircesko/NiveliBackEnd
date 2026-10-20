@@ -23,10 +23,6 @@
 			{
 				echo 'Correct! <br> You are welcome!';
 			}
-			// else if(!preg_match("/^[a-zA-ZëË ]*$/", $username) || !preg_match("/^[a-zA-ZëË ]*$/", $password)) 
-			// {
-    		// 	echo 'Correct! <br> You are welcome!';
-			// }
 			else
 			{
 				echo 'Username and Password is incorrect!';

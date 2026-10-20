@@ -3,18 +3,18 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		$a = $_POST['Username'];
-		$b = $_POST['Email'];
+		$b = $_POST['Password'];
 		if(empty($a)&&empty($b))
 		{
-			echo 'Username and Email is empty';
+			echo 'Username and Password is empty';
 		}
-		else if($a === 'admin' && $b === 'kebircesko@gmail.com')
+		else if($a === 'admin' && $b === 'admin123')
 		{
 			echo 'Correct! <br> You are welcome!';
 		}
 		else
 		{
-			echo 'Username and Email is incorrect!';
+			echo 'Username and Password is incorrect!';
 		}
 	}
 ?>

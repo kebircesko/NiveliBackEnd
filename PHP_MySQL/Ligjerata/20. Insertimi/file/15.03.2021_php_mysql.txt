@@ -1,0 +1,3 @@
+admin,login(registration),Login,registration
+
+1.Krijimi i nje database login,krijimi i nje tabele registration

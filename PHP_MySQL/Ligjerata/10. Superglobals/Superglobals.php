@@ -24,27 +24,21 @@
 			$x = 75;
 			$y = 25;
 			
-			echo "Ky eshte prej skriptes me lart nje variabel qe e ka vleren = " .$a ."<br>";
 			function vlere()
 			{	
 			//$z = $x + $y; kjo metod nuk funksionon.
 			$GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
             //Variabla $GLOBALS a funksionon edhe jashte Sciptes PHP.
-			
 			}
-			echo vlere();
-			echo $z."<br>";
-			echo $y;
-			echo "<br>";
+			vlere();
+			echo $z;
 		
-		?>
-		<?php 
-			echo $z //ketu thirret variabla z e cila eshte globale 
 		?>
 		<p>$_SERVER</p>
 		<?php
 			//$ _SERVER është një variabël super globale PHP, e cila mban informacione në lidhje me headers, paths dhe vendodhjet e script-ave.
 			//Shembulli më poshtë tregon se si të përdorni disa nga elementët në $_SERVER:
+			
 			echo $_SERVER['PHP_SELF']; //tregon vendodhjen e file qe jemi.
 			echo "<br>";
  			echo $_SERVER['SERVER_NAME']; //tregon emrin e serverit ku gjendet file i yne.
@@ -71,6 +65,8 @@
 			Shembulli më poshtë tregon një formë me një fushë hyrëse dhe një buton dorëzimi. 
 			Kur një përdorues paraqet të dhënat duke klikuar në "Paraqit", të dhënat e formularit i dërgohen skedarit të specifikuar në atributin e veprimit të etiketës <form>. Në këtë shembull, ne i tregojmë këtij skedari vetë për përpunimin e të dhënave të formularit. Nëse dëshironi të përdorni një skedar tjetër PHP për të përpunuar të dhënat e formularit, zëvendësoni atë me emrin e zgjedhjes suaj. 
 			Pastaj, mund të përdorim variablen super global $ _REQUEST për të mbledhur vlerën e fushës së hyrjes*/
+			
+
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				// collect value of input field(mbledhja e të dhënave nga fushat input)
 				$name = $_REQUEST['fname'];//$_REQUEST->mbledhjen e të dhënave pas dërgimit të dhënave të një kontakt forme.
@@ -105,6 +101,8 @@
 					echo $name;
 				}
 			}	
+		
+		
 		?>
 		<p>$_GET</p>
 		<?php
@@ -118,13 +116,12 @@
 			GET nuk duhet te përdoret për dërgimin e fjalëkalimeve ose informacione të tjera të ndjeshme!*/	
 		?>
 
-		<a href="login1.php?subject=ShkollaDigjitalePrizren&web=shkolladigjitaleprizren.com "> Provo $ GET </a>
+		<a href="login1.php?subject=ShkollaDigjitalePrizren&web=Shkolladigjitale.com "> Provo $ GET </a>
 		
 		<p>$_GET_input</p>
 		
 		<form method="get" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			Email: <input type="text" name="Email">
-			Password: <input type="password" name="Password">
 			<input type="submit" value="Log in">
 		</form>
 		<?php
@@ -133,7 +130,6 @@
 			{
 				// Mbledh apo merr vleren e inputit.
 				$z = $_GET['Email'];
-				$password = $_GET['Password'];
 				if (empty($z)) 
 				{
 					echo "Email is empty";
@@ -141,16 +137,14 @@
 				else
 				{
 					echo $z;
-					echo "<br>";
-					echo $password;
-					// PHP program to pop an alert 
+					/* PHP program to pop an alert 
 					// message box on the screen 
 					  
 					// Display the alert box 
 					$shtyp="Hello"; 
 					echo "<script>alert('$shtyp $z');</script>";;
 					//echo '<script>alert("Welcome to Geeks for Geeks")</script>'; 
-					
+					*/ 
 				}
 			}			
 		?>

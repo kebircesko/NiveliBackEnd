@@ -1,10 +1,21 @@
+<html>
+	<head>
+	</head>
+	<body>
+	
+		<form method="post" action="login.php">
+			Username: <input type="text" name="Username" ><br><br>
+			Password: <input type="password" name="Password"><br><br>
+			<input type="submit" value="Log in">
+			<input type="reset" value="Cancel">
+		</form>
+	</body>
+</html>
  <?php
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		$a = $_POST['Username'];
-		
 		$b = $_POST['Password'];
-
 		if(empty($a) and empty($b))
 		{
 			echo '<script>alert("Username or Password is empty")</script>';
@@ -19,18 +30,3 @@
 		}
 	}
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Login</title>
-	</head>
-	<body>
-		<form method="post" action="login.php">
-			Username: <input type="text" name="Username" ><br><br>
-			Password: <input type="password" name="Password"><br><br>
-			<input type="submit" value="Log in">
-			<input type="reset" value="Cancel">
-		</form>
-	</body>
-</html>
-

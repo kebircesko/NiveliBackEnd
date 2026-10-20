@@ -2,7 +2,7 @@
 	<head>
 	</head>
 	<body>
-		<h2>Detyra 1 convertCtoF (15grad)</h2>
+		<p>Detyra 1</p>
 		<?php
 			function convertCtoF($c)
 			{
@@ -12,7 +12,6 @@
 			echo convertCtoF(15);
 		?>
 		<br>
-		<h2>Detyra 2 convertFtoC (15grad)</h2>
 		<?php
 			function convertFtoC($f)
 			{
@@ -21,11 +20,11 @@
 			}
 			echo convertFtoC(15);
 		?>
-		<h2>Detyra 3 Mesatarja</h2>
+		<p>Detyra 2</p>
 		<?php
-			function mesatarja($p1,$p2,$p3,$p4,$p5)
+			function mesatarja(p1,p2,p3,p4,p5)
 			{
-				$sum = ($p1+$p2+$p3+$p4+$p5)/5;
+				$sum = (p1+p2+p3+p4+p5)/5;
 				return $sum;
 			}
             echo mesatarja(1,2,3,4,5);

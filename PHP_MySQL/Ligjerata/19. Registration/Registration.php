@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<?php
-            $connect=mysqli_connect("localhost","root","","login");
+            $connect=mysqli_connect("localhost","kebir","Kebir123!","login");
                 mysqli_select_db($connect,"login");
 			$empFirstName = "";//Inicializimi i variablave
 			$empLastName = "";

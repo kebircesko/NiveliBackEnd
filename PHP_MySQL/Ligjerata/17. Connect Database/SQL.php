@@ -1,8 +1,8 @@
 <?php  
     //lidhja me localhost 
     $server = "localhost"; //emri i serverit 
-    $username = "root";  //Default per username eshte root  
-    $password = "";     //Default per password eshte e zbrazet  
+    $username = "kebir";  //Default per username eshte root  
+    $password = "Kebir123!";     //Default per password eshte e zbrazet  
     $connect = mysqli_connect($server, $username, $password); // Create connection
     if(!$connect)// Check connection
     {

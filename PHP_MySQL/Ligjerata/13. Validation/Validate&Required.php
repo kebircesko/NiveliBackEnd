@@ -18,7 +18,7 @@
 					$empUsername ="Username is required";
 				}
 			//Funksioni preg_match na mundeson qe ta shenojme nje input ne forme te rregullt, apo te na paralajmroje kur kemi perdorur ndonje karakter jovalid.
-				else if (!preg_match("/^[a-zA-ZËëÇç ]*$/",$username)) 
+				else if (!preg_match("/^[a-zA-ZëË ]*$/",$username)) 
 				{
 					$empUsername = "Only letters and white space allowed";
 				}
@@ -26,7 +26,7 @@
 				if(empty($email))
 				{
 					$empEmail ="Email is required";
-				}	
+				}
 				else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) //Filter_var->e ben filtrimin e variables psh ketu per filtrimin e email
 				{
 					$empEmail = "Invalid email format";
@@ -48,6 +48,7 @@
 			<input type="submit" value="Log in">
 			<input type="reset" value="Cancel">
 		</form>
+		
 		<?php
 			echo $username;
 			echo "<br>";
